@@ -1,0 +1,14 @@
+[
+    {
+        "íd":1,
+        "title":"T shirt",
+        "price":12.99,
+        "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
+    },
+    {
+        "íd":2,
+        "title":"Cap",
+        "price":12.99,
+        "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
+    }
+]
