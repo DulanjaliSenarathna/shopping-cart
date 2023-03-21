@@ -71,7 +71,7 @@
 </div>
 
 <div class="max-w-md w-80 mt-4 ml-5 mr-20 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl w-2/5">
-  <div class="divide-y divide-dashed mt-5 mr-5 ml-5 mb-3">
+  <div class="divide-y divide-dashed mt-5 mr-5 ml-5 mb-0">
   <div class="md:flex">
     <div>
       <p class="text-zinc-500 flex space-x-2 text-sm">Delivery</p>
@@ -120,21 +120,12 @@
       <p class="text-zinc-500 flex space-x-2 text-xs mt-5">$78.76</p>   
   </div>      
 </div>
- <div >
-  <button class=" h-10 items-center w-72 ml-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Proceed to checkout
-    </button>   
-    <button class="mt-2 h-10 w-72 ml-5  hover:bg-blue-500 border border-blue-500 hover:text-white shadow-lg  text-blue-700 font-bold py-2 px-4 rounded">
-          Continue shopping
-    </button> 
- </div>
+            <button class=" p-2 items-center  mt-3 m-auto ml-16 sm:mr-16  bg-blue-500 hover:bg-blue-700 text-white rounded-md  ">Proceed to checkout</button>
+            <button class=" p-2 pr-4 items-center  mt-2 m-auto ml-16 sm:mr-16  border border-blue-500 hover:bg-blue-100 text-blue-700 rounded-md  ">Continue shopping</button>
       
   </div>
 </div>
-  
-
-
-
+ 
   </template>
  
 <script>
@@ -144,7 +135,6 @@ import products from '../mock/products.json';
    data(){
     return{
       products,
-      
     }
    }
    }
