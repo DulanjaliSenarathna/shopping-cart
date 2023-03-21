@@ -1,5 +1,5 @@
-<template>
-  <div >
+<template >
+  <div class="flex flex-col min-h-screen  bg-[#F0EEED]">
     <Cart/>
     <RouterView/>
   </div>
@@ -9,7 +9,3 @@
     import {RouterView} from "vue-router";
     import Cart from "./components/Cart.vue";
 </script>
-
-<style lang="scss" scoped>
-
-</style>
