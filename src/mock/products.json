@@ -3,12 +3,36 @@
         "íd":1,
         "title":"T shirt",
         "price":12.99,
+        "status":"In Stock",
+        "size":"XL",
+        "color":"blue",
         "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
     },
     {
         "íd":2,
         "title":"Cap",
+        "price":15.36,
+        "status":"In Stock",
+        "size":"XL",
+        "color":"blue",
+        "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
+    },
+    {
+        "íd":3,
+        "title":"Cap",
         "price":12.99,
+        "status":"In Stock",
+        "size":"XL",
+        "color":"blue",
+        "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
+    },
+    {
+        "íd":3,
+        "title":"Cap",
+        "price":12.99,
+        "status":"In Stock",
+        "size":"XL",
+        "color":"blue",
         "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
     }
 ]
