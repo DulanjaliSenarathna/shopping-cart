@@ -14,14 +14,14 @@
         <p class="text-zinc-500 flex space-x-2 text-sm">{{ item.title }}</p>
         <div class="text-black text-sm font-bold">{{ item.price }}</div>
       </div>
-      <div class=" flex">
+      <div class="flex">
         <label class="text-zinc-400 text-xs mt-1"> {{ item.price }}</label>
         <p class="text-[#32CD32] ml-4 mt-1 text-xs"> <strong>In Stock</strong> </p>
       </div>
-      <div class="flex">
+      <div class="flex flex-col md:flex-row">
         <div class="mt-3">
-        <div class="shadow-sm text-zinc-500 w-15 flex items-center justify-center  rounded-md border w-20 ">
-                <p class="text-xs mr-4 ml-3">{{ item.size }}</p>
+        <div class="shadow-sm text-zinc-500 w-15 flex items-center justify-center  rounded-md border w-20  ">
+                <p class="text-xs mr-4 ml-3 ">{{ item.size }}</p>
                 <div class="mr-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-up-fill cursor-pointer text-xs" viewBox="0 0 16 16">
                   <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
@@ -32,7 +32,7 @@
                 </div>
             </div>
       </div>
-      <div class="mt-3 ml-10">
+      <div class="mt-3 ml-10 ">
         <div class="shadow-sm text-zinc-500 w-15 flex items-center justify-center  rounded-md border w-20 ">
                 <p class="text-xs mr-4 ml-3">{{ item.color }}</p>
                 <div class="mr-2 ">
@@ -120,8 +120,8 @@
       <p class="text-zinc-500 flex space-x-2 text-xs mt-5">$78.76</p>   
   </div>      
 </div>
-            <button class=" p-2 items-center  mt-3 m-auto ml-16 sm:mr-16  bg-blue-500 hover:bg-blue-700 text-white rounded-md  ">Proceed to checkout</button>
-            <button class=" p-2 pr-4 items-center  mt-2 m-auto ml-16 sm:mr-16  border border-blue-500 hover:bg-blue-100 text-blue-700 rounded-md  ">Continue shopping</button>
+            <button class=" p-2 items-center  mt-3 m-auto ml-20 sm:mr-16  bg-blue-500 hover:bg-blue-700 text-white rounded-md  ">Proceed to checkout</button>
+            <button class=" p-2 pr-4 items-center  mt-2 m-auto ml-20 sm:mr-16  border border-blue-500 hover:bg-blue-100 text-blue-700 rounded-md  ">Continue shopping</button>
       
   </div>
 </div>
