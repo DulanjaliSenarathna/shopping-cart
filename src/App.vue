@@ -1,5 +1,5 @@
 <template >
-  <div class="flex flex-col min-h-screen  bg-[#F0EEED]">
+  <div id="app" class="flex flex-col min-h-screen  bg-[#F0EEED]">
     <Cart/>
     <RouterView/>
   </div>

@@ -1,9 +1,9 @@
-<template>
+<template >
   <div class=" flex">
-    <div class="  w-3/5 max-w-md mt-4 ml-20 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div ref="div1" class="  w-3/5 max-w-md mt-4 ml-20 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl md:flex-row sm:flex-row md:flex-shrink-0 sm:flex-shrink-0">
       <p class="mt-2 ml-5"> <strong>Cart</strong> </p>
       
-  <div class="md:flex" v-for="item in products" :key="item.id">
+  <div class="md:flex" v-for="item in items" :key="item.id">
    
     <div class="md:flex-shrink-0">
       
@@ -12,13 +12,13 @@
     <div class="ml-3 mt-4">
       <div class="flex justify-between">
         <p class="text-zinc-500 flex space-x-2 text-sm">{{ item.title }}</p>
-        <div class="text-black text-sm font-bold">{{ item.price }}</div>
+        <div class="text-black text-sm font-bold">{{ item.price * item.quantity }}</div>
       </div>
       <div class="flex">
         <label class="text-zinc-400 text-xs mt-1"> {{ item.price }}</label>
         <p class="text-[#32CD32] ml-4 mt-1 text-xs"> <strong>In Stock</strong> </p>
       </div>
-      <div class="flex flex-col md:flex-row">
+      <div class="flex flex-col md:flex-row sm:flex-row ">
         <div class="mt-3">
         <div class="shadow-sm text-zinc-500 w-15 flex items-center justify-center  rounded-md border w-20  ">
                 <p class="text-xs mr-4 ml-3 ">{{ item.size }}</p>
@@ -33,7 +33,7 @@
             </div>
       </div>
       <div class="mt-3 ml-10 ">
-        <div class="shadow-sm text-zinc-500 w-15 flex items-center justify-center  rounded-md border w-20 ">
+        <div class="shadow-sm md:flex-row sm:flex-row text-zinc-500 w-15 flex items-center justify-center  rounded-md border w-20 ">
                 <p class="text-xs mr-4 ml-3">{{ item.color }}</p>
                 <div class="mr-2 ">
                   <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-up-fill cursor-pointer" viewBox="0 0 16 16">
@@ -46,37 +46,40 @@
             </div>
       </div>
       
-      <div class=" flex rounded ml-10 mt-3 h-7">
-            <div class="text-zinc-500 w-8 flex items-center justify-center cursor-pointer rounded-l-md border-t border-l border-b">
+      <div class=" flex rounded ml-10 mt-3 h-7 md:flex-shrink-0">
+            <div class="text-zinc-500 w-8 flex items-center justify-center cursor-pointer rounded-l-md border-t border-l border-b" @click="decreaseQuantity(item)">
                 -
             </div>
-            <div class="w-8 flex items-center  text-xs justify-center border-t border-b">1</div>
-            <div class="text-zinc-500 w-8 flex items-center justify-center cursor-pointer rounded-r-md  text-s border-b border-t border-r ">+</div>
+            <div class="w-8 flex items-center  text-xs justify-center border-t border-b">{{item.quantity }}</div>
+            <div class="text-zinc-500 w-8 flex items-center justify-center cursor-pointer rounded-r-md  text-s border-b border-t border-r " @click="increaseQuantity(item)">
+              +
+            </div>
+            
         </div>
 
-        <div class="flex ml-12 justify-center">
+        <div class="flex ml-12 justify-center md:flex-row sm:flex-row md:flex-shrink-0">
       <svg  style="color: rgb(140, 140, 151);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill mt-3 cursor-pointer" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" fill="#8c8c97"></path> </svg>
       <p class="text-xs ml-2 mt-3">Save</p>
     </div>
-    <div class="flex ml-12 justify-center">
+    <div class="flex ml-12 justify-center md:flex-row sm:flex-row md:flex-shrink-0">
       <svg style="color: rgb(140, 140, 151);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill mt-3 cursor-pointer" viewBox="0 0 16 16"> <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" fill="#8c8c97"></path> </svg>
       <p class="text-xs ml-2 mt-3 ">Delete</p>
      </div>
       </div>
       <hr class="mt-5"/>
     </div>
-    
+   
   </div>
-  
+   
 </div>
 
-<div class="max-w-md w-80 mt-4 ml-5 mr-20 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl w-2/5">
+<div ref="div2" class="max-w-md w-80 mt-4 ml-5 mr-20 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl w-2/5">
   <div class="divide-y divide-dashed mt-5 mr-5 ml-5 mb-0">
   <div class="md:flex">
     <div>
       <p class="text-zinc-500 flex space-x-2 text-sm">Delivery</p>
-      <div class="mt-2">
-        <div class= " items-center h-8 flex text-zinc-500  flex  items-start justify-start  rounded-md border w-40  bg-[#EEEEEE] ">
+      <div class="mt-2" >
+        <div  class= " items-center h-8 flex text-zinc-500  flex  items-start justify-start  rounded-md border w-40  bg-[#EEEEEE] ">
           	<button class=" h-7 rounded-md border text-sm w-10 bg-white shadow-md ">Free</button>
             <button class="text-sm ml-3 ">Express: $9.99</button>
         </div>
@@ -92,9 +95,9 @@
         <p class="text-zinc-400 text-xs mt-2 mb-5">20% off discount</p> 
   </div>
   <div>
-    <div class="flex justify-between">
+    <div class="flex justify-between" >
       <p class="text-zinc-500 flex space-x-2 text-sm mt-5">Subtotal</p>
-      <p class="text-zinc-500 flex space-x-2 text-xs mt-5">$80.96</p>
+      <p class="text-zinc-500 flex space-x-2 text-xs mt-5">{{ }}</p>
     </div>
     <div class="flex justify-between">
       <p class="text-zinc-500 flex space-x-2 text-xs mt-3">Discount</p>
@@ -129,12 +132,71 @@
   </template>
  
 <script>
-import products from '../mock/products.json';
  export default{
    name:"ProductList",
    data(){
     return{
-      products,
+      items: [
+    {
+        "íd":1,
+        "title":"T shirt",
+        "price":12.99,
+        "status":"In Stock",
+        "size":"XL",
+        "color":"blue",
+        "quantity":5,
+        "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
+    },
+    {
+        "íd":2,
+        "title":"Cap",
+        "price":15.36,
+        "status":"In Stock",
+        "size":"XL",
+        "color":"blue",
+        "quantity":3,
+        "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
+    },
+    {
+        "íd":3,
+        "title":"Cap",
+        "price":12.99,
+        "status":"In Stock",
+        "size":"XL",
+        "color":"blue",
+        "quantity":4,
+        "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
+    },
+    {
+        "íd":3,
+        "title":"Cap",
+        "price":12.99,
+        "status":"In Stock",
+        "size":"XL",
+        "color":"Blue",
+        "quantity":8,
+        "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
+    }
+]
+    }
+   },
+   methods:{
+        decreaseQuantity(item){
+          
+          //prevent minus values for quantity
+          item.quantity--;
+          if(item.quantity===0){
+            this.items.splice(this.items.indexOf(item),1)
+          }
+        },
+
+        increaseQuantity(item){
+          item.quantity++;
+        },     
+   },
+   computed:{
+    subTotal(){
+     return subCost = 0;
     }
    }
    }

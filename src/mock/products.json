@@ -6,6 +6,7 @@
         "status":"In Stock",
         "size":"XL",
         "color":"blue",
+        "quantity":1,
         "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
     },
     {
@@ -15,6 +16,7 @@
         "status":"In Stock",
         "size":"XL",
         "color":"blue",
+        "quantity":1,
         "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
     },
     {
@@ -24,6 +26,7 @@
         "status":"In Stock",
         "size":"XL",
         "color":"blue",
+        "quantity":1,
         "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
     },
     {
@@ -33,6 +36,7 @@
         "status":"In Stock",
         "size":"XL",
         "color":"blue",
+        "quantity":1,
         "imageUrl":"https://i.ibb.co/rGf1nwB/tshirt.jpg"
     }
 ]
