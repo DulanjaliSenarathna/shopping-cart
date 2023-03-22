@@ -205,7 +205,8 @@
         "size":"XL",
         "color":"Blue",
         "quantity":8,
-        "imageUrl":"https://i.ibb.co/nzJhq0F/images-removebg-preview.jpg"
+        "imageUrl":"https://i.ibb.co/grwQx2k/west.jpg"
+        
          }
 ]
     }
